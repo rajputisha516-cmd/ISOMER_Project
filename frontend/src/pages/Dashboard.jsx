@@ -23,12 +23,16 @@ function Dashboard() {
   const lastFpsUpdateRef = useRef(0)
 
   useEffect(() => {
-    const newSocket = io(SOCKET_URL)
+    const newSocket = io(SOCKET_URL, {
+      transports: ['polling'],
+      upgrade: false,
+      timeout: 10000,
+      reconnectionAttempts: 5
+    })
 
     const handleConnect = () => {
       setConnectionState('connected')
       setStreamError('')
-      newSocket.emit('start_stream', { source: 0 })
     }
 
     const handleDisconnect = () => {
@@ -37,10 +41,14 @@ function Dashboard() {
       setStats(prev => ({ ...prev, fps: 0 }))
     }
 
-    const handleConnectError = () => {
+    const handleConnectError = (error) => {
       setConnectionState('error')
       setStreaming(false)
-      setStreamError('Unable to connect to the backend stream service.')
+      setStreamError(error?.message || 'Unable to connect to the backend stream service.')
+    }
+
+    const handleConnectionResponse = (data) => {
+      setStreaming(Boolean(data?.streaming))
     }
 
     const handleStreamStarted = () => {
@@ -75,6 +83,7 @@ function Dashboard() {
     newSocket.on('connect', handleConnect)
     newSocket.on('disconnect', handleDisconnect)
     newSocket.on('connect_error', handleConnectError)
+    newSocket.on('connection_response', handleConnectionResponse)
     newSocket.on('stream_started', handleStreamStarted)
     newSocket.on('stream_stopped', handleStreamStopped)
     newSocket.on('stream_error', handleStreamError)
@@ -86,6 +95,7 @@ function Dashboard() {
       newSocket.off('connect', handleConnect)
       newSocket.off('disconnect', handleDisconnect)
       newSocket.off('connect_error', handleConnectError)
+      newSocket.off('connection_response', handleConnectionResponse)
       newSocket.off('stream_started', handleStreamStarted)
       newSocket.off('stream_stopped', handleStreamStopped)
       newSocket.off('stream_error', handleStreamError)

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Search, Download, Filter } from 'lucide-react'
+import { Download, Filter } from 'lucide-react'
 import api from '../services/api'
 
 function History() {
@@ -56,6 +56,8 @@ function History() {
       link.setAttribute('download', `history_${new Date().toISOString().split('T')[0]}.csv`)
       document.body.appendChild(link)
       link.click()
+      link.remove()
+      window.URL.revokeObjectURL(url)
     } catch (error) {
       console.error('Failed to export:', error)
     }
@@ -182,7 +184,7 @@ function History() {
                     }`}
                   >
                     <div className="flex-1">
-                      <p className="font-semibold capitalize">{alert.type}</p>
+                      <p className="font-semibold capitalize">{alert.alert_type || alert.type}</p>
                       <p className="text-sm text-gray-400">{alert.message}</p>
                       <p className="text-xs text-gray-500 mt-1">{new Date(alert.timestamp).toLocaleString()}</p>
                     </div>

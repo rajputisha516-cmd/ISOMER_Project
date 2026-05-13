@@ -2,11 +2,16 @@
 Video processing with YOLOv8 segmentation.
 """
 
+import os
+
 import cv2
 import numpy as np
-from ultralytics import YOLO
 
 from utils.config import Config
+
+os.environ.setdefault("YOLO_CONFIG_DIR", str(Config.ULTRALYTICS_CONFIG_DIR))
+
+from ultralytics import YOLO
 
 
 class VideoProcessor:
@@ -22,7 +27,11 @@ class VideoProcessor:
     def load_model(self):
         """Load the YOLOv8 segmentation model."""
         try:
-            self.model = YOLO(f"{self.model_name}.pt")
+            model_path = Config.MODEL_WEIGHTS_PATH
+            if not os.path.exists(model_path):
+                model_path = self.model_name
+
+            self.model = YOLO(model_path)
             name_to_id = {name: idx for idx, name in self.model.names.items()}
             self.class_filter = [
                 name_to_id[name]

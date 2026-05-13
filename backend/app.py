@@ -29,6 +29,16 @@ CORS(app, resources={r"/api/*": {"origins": "*"}})
 # Initialize Socket.IO for real-time communication
 socketio = SocketIO(app, cors_allowed_origins="*", async_mode="threading")
 
+for directory in (
+    Config.INSTANCE_DIR,
+    Config.ULTRALYTICS_CONFIG_DIR,
+    Config.UPLOAD_FOLDER,
+    Config.CAPTURE_DIR,
+    Config.HISTORY_DIR,
+    Config.LOG_DIR,
+):
+    os.makedirs(directory, exist_ok=True)
+
 # Initialize database
 init_db(app)
 
@@ -51,7 +61,14 @@ detection_data = None
 
 def initialize_directories():
     """Create required directories if they do not exist."""
-    for directory in ["uploads", "captures", "history", "logs"]:
+    for directory in (
+        Config.UPLOAD_FOLDER,
+        Config.CAPTURE_DIR,
+        Config.HISTORY_DIR,
+        Config.LOG_DIR,
+        Config.INSTANCE_DIR,
+        Config.ULTRALYTICS_CONFIG_DIR,
+    ):
         os.makedirs(directory, exist_ok=True)
 
 
@@ -171,14 +188,6 @@ def handle_start_stream(data):
         stream_thread = threading.Thread(target=stream_video, args=(source,), daemon=True)
         stream_thread.start()
 
-    emit(
-        "stream_started",
-        {
-            "status": "Stream started",
-            "source": source,
-        },
-    )
-
 
 @socketio.on("stop_stream")
 def handle_stop_stream():
@@ -217,6 +226,14 @@ def stream_video(source):
         emit_stream_error(f"Could not open video source: {source}")
         socketio.emit("stream_stopped", {"status": "Stream stopped", "source": source})
         return
+
+    socketio.emit(
+        "stream_started",
+        {
+            "status": "Stream started",
+            "source": source,
+        },
+    )
 
     consecutive_failures = 0
     frames_in_window = 0
@@ -382,8 +399,9 @@ if __name__ == "__main__":
     initialize_directories()
     socketio.run(
         app,
-        host="0.0.0.0",
-        port=5000,
-        debug=True,
+        host=os.environ.get("HOST", "0.0.0.0"),
+        port=int(os.environ.get("PORT", 5000)),
+        debug=Config.DEBUG,
+        use_reloader=False,
         allow_unsafe_werkzeug=True,
     )

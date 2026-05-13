@@ -156,7 +156,7 @@ function Analytics() {
         {alertStats && (
           <div className="glass p-6 rounded-lg">
             <p className="text-gray-400 text-sm">Active Alerts</p>
-            <p className="text-2xl font-bold text-yellow-400 mt-2">{alertStats.total_alerts - (alertStats.total_alerts / 4)}</p>
+            <p className="text-2xl font-bold text-yellow-400 mt-2">{alertStats.active_alerts}</p>
           </div>
         )}
       </div>

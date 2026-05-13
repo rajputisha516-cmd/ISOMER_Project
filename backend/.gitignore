@@ -33,6 +33,7 @@ env/
 # Environment
 .env
 .env.local
+.ultralytics/
 
 # Database
 *.db
