@@ -1,0 +1,24 @@
+
+> surveillance-frontend@1.0.0 dev
+> vite --host 0.0.0.0
+
+
+  [32m[1mVITE[22m v4.5.14[39m  [2mready in [0m[1m282[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m3000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.1.33:[1m3000[22m/[39m
+[2m4:08:04 pm[22m [36m[1m[vite][22m[39m [32mvite.config.js changed, restarting server...[39m
+[2m4:08:05 pm[22m [36m[1m[vite][22m[39m server restarted.
+[2m4:08:17 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mdist/index.html[22m
+[2m4:17:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Dashboard.jsx, /src/index.css[22m
+[2m4:17:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Dashboard.jsx, /src/index.css[22m
+[2m4:18:19 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/VideoStream.jsx, /src/index.css[22m
+[2m4:18:19 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/VideoStream.jsx, /src/index.css[22m
+[2m4:18:30 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AlertPanel.jsx, /src/index.css[22m
+[2m4:18:35 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/pages/Settings.jsx, /src/pages/History.jsx, /src/pages/Analytics.jsx, /src/pages/Dashboard.jsx, /src/components/AlertPanel.jsx[22m
+[2m4:21:42 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Dashboard.jsx, /src/index.css[22m
+[2m4:54:45 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Settings.jsx, /src/index.css[22m
+[2m4:54:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Settings.jsx, /src/index.css[22m
+[2m4:55:05 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Settings.jsx, /src/index.css[22m
+[2m4:55:23 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Settings.jsx, /src/index.css[22m
+[2m4:55:34 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Settings.jsx, /src/index.css[22m

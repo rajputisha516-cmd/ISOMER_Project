@@ -1,0 +1,865 @@
+Downloading https:\github.com\ultralytics\assets\releases\download\v0.0.0\yolov8n-seg.pt to 'yolov8n-seg.pt'...
+  0%|          | 0.00/6.73M [00:00<?, ?B/s]  4%|3         | 256k/6.73M [00:00<00:02, 2.35MB/s] 18%|#7        | 1.20M/6.73M [00:00<00:00, 6.61MB/s] 57%|#####6    | 3.81M/6.73M [00:00<00:00, 15.7MB/s] 88%|########8 | 5.94M/6.73M [00:00<00:00, 18.1MB/s]100%|##########| 6.73M/6.73M [00:00<00:00, 14.8MB/s]
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.33:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 183-135-202
+127.0.0.1 - - [13/May/2026 16:03:42] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:03:54] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:07:45] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:08:28] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:08:35] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:09:56] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:09:56] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:09:56] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:09:56] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:01] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:01] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:06] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:06] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:11] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:11] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+[ WARN:0@398.422] global cap_msmf.cpp:471 `anonymous-namespace'::SourceReaderCB::OnReadSample videoio(MSMF): OnReadSample() is called with error status: -1072873821
+[ WARN:0@398.424] global cap_msmf.cpp:483 `anonymous-namespace'::SourceReaderCB::OnReadSample videoio(MSMF): async ReadSample() call is failed with error status: -1072873821
+Exception in thread Thread-25 (stream_video):
+Traceback (most recent call last):
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\threading.py", line 1009, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\threading.py", line 946, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\Isomer\backend\app.py", line 132, in stream_video
+    motion_frame, motion_data = motion_detector.detect(frame)
+  File "D:\Isomer\backend\motion_detection\detector.py", line 45, in detect
+    self.flow = cv2.calcOpticalFlowFarneback(
+cv2.error: OpenCV(4.8.1) :-1: error: (-5:Bad argument) in function 'calcOpticalFlowFarneback'
+> Overload resolution failed:
+>  - calcOpticalFlowFarneback() takes at most 10 arguments (11 given)
+>  - calcOpticalFlowFarneback() takes at most 10 arguments (11 given)
+
+127.0.0.1 - - [13/May/2026 16:10:16] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:16] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+WARNING:tensorflow:From C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+127.0.0.1 - - [13/May/2026 16:10:21] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:21] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:21] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 330, in execute
+    write(b"")
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 255, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+127.0.0.1 - - [13/May/2026 16:10:21] "GET /api/history/detections HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:22] "GET /api/history/detections HTTP/1.1" 200 -
+Exception in thread Thread-13 (stream_video):
+Traceback (most recent call last):
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\threading.py", line 1009, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\threading.py", line 946, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\Isomer\backend\app.py", line 164, in stream_video
+    socketio.emit('video_frame', {
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_socketio\__init__.py", line 462, in emit
+    self.server.emit(event, *args, namespace=namespace, to=to,
+TypeError: Server.emit() got an unexpected keyword argument 'broadcast'
+127.0.0.1 - - [13/May/2026 16:10:27] "GET /api/history/detections?start_date=2026-05-12 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:30] "GET /api/detection/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:30] "GET /api/alert/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:30] "GET /api/history/daily-summary HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:30] "GET /api/detection/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:30] "GET /api/alert/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:30] "GET /api/history/daily-summary HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:45] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:45] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:45] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:46] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+Exception in thread Thread-52 (stream_video):
+Traceback (most recent call last):
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\threading.py", line 1009, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\threading.py", line 946, in run
+    self._target(*self._args, **self._kwargs)
+  File "D:\Isomer\backend\app.py", line 132, in stream_video
+    motion_frame, motion_data = motion_detector.detect(frame)
+  File "D:\Isomer\backend\motion_detection\detector.py", line 45, in detect
+    self.flow = cv2.calcOpticalFlowFarneback(
+cv2.error: OpenCV(4.8.1) :-1: error: (-5:Bad argument) in function 'calcOpticalFlowFarneback'
+> Overload resolution failed:
+>  - calcOpticalFlowFarneback() takes at most 10 arguments (11 given)
+>  - calcOpticalFlowFarneback() takes at most 10 arguments (11 given)
+
+127.0.0.1 - - [13/May/2026 16:10:50] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:50] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:56] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:10:56] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:01] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:01] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:06] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:06] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:11] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:11] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:16] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:16] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:21] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:21] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:26] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:26] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:31] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:31] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:36] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:36] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:46] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:46] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:51] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:51] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:56] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:11:56] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:01] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:01] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:06] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:06] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:11] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:11] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:16] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:16] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:33] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:33] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:35] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:35] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:40] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:40] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:46] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:46] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:50] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:50] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:57] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:12:57] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:01] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:01] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:06] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:06] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:11] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:11] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:16] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:16] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:21] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:21] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:25] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:25] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:30] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:30] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:35] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:35] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:39] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 330, in execute
+    write(b"")
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 255, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+127.0.0.1 - - [13/May/2026 16:13:39] "GET /api/detection/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:40] "GET /api/detection/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:40] "GET /api/alert/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:40] "GET /api/history/daily-summary HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:40] "GET /api/alert/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:40] "GET /api/history/daily-summary HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:43] "GET /api/history/detections HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:13:44] "GET /api/history/detections HTTP/1.1" 200 -
+ * Detected change in 'D:\\Isomer\\backend\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 183-135-202
+ * Detected change in 'D:\\Isomer\\backend\\motion_detection\\detector.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 183-135-202
+ * Detected change in 'D:\\Isomer\\backend\\video_processing\\processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 183-135-202
+127.0.0.1 - - [13/May/2026 16:17:48] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:17:48] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:17:48] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:17:48] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:17:52] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:17:53] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:17:57] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 330, in execute
+    write(b"")
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 255, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+127.0.0.1 - - [13/May/2026 16:17:57] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:17:57] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:17:57] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:17:57] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+WARNING:tensorflow:From C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+127.0.0.1 - - [13/May/2026 16:18:03] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:03] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:08] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:08] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:13] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:13] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:18] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:18] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:23] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:23] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:27] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:27] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:30] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:31] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:32] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:35] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 500 -
+127.0.0.1 - - [13/May/2026 16:18:35] "GET /api/alert/active HTTP/1.1" 200 -
+Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 330, in execute
+    write(b"")
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 255, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+127.0.0.1 - - [13/May/2026 16:18:35] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:40] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:40] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:45] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:45] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:47] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 330, in execute
+    write(b"")
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 255, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+127.0.0.1 - - [13/May/2026 16:18:47] "GET /api/history/detections HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:47] "GET /api/history/detections HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:50] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:50] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:50] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:50] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:55] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:18:55] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:00] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:00] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:05] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:05] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:10] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:11] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:15] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:15] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:20] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:20] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:33] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:33] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:33] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:33] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:35] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:35] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:40] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:40] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:45] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:45] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:50] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:50] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:55] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:19:55] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:04] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:04] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:05] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:05] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:05] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:10] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:10] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:15] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:15] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:20] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:20] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:25] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:25] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:26] "GET /socket.io/?transport=websocket&EIO=4&t=1778669422.6473997 HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 330, in execute
+    write(b"")
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 255, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+127.0.0.1 - - [13/May/2026 16:20:30] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:30] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:35] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:35] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:40] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:40] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:45] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:45] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:47] "GET /socket.io/?transport=websocket&EIO=4&t=1778669442.9786038 HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 330, in execute
+    write(b"")
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 255, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+127.0.0.1 - - [13/May/2026 16:20:50] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:50] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:55] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:20:55] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:00] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:00] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:05] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:07] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:07] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:10] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:10] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:15] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:15] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:20] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:20] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:25] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:25] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:30] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:30] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:35] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:35] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:40] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:40] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:43] "GET /socket.io/?EIO=4&transport=polling&t=xwcahxwz HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:43] "GET /socket.io/?EIO=4&transport=websocket HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 330, in execute
+    write(b"")
+  File "C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\serving.py", line 255, in write
+    assert status_set is not None, "write() before start_response"
+AssertionError: write() before start_response
+127.0.0.1 - - [13/May/2026 16:21:43] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:43] "POST /socket.io/?EIO=4&transport=polling&t=xwcb8ai0&sid=WL2Qh-wV9OBxjIg4AAAM HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:43] "GET /socket.io/?EIO=4&transport=polling&t=xwcbg16a&sid=WL2Qh-wV9OBxjIg4AAAM HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:43] "GET /socket.io/?EIO=4&transport=polling&t=xwclruab&sid=WL2Qh-wV9OBxjIg4AAAM HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:44] "POST /socket.io/?EIO=4&transport=polling&t=xwclysg1&sid=WL2Qh-wV9OBxjIg4AAAM HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:45] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:49] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:50] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:54] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:56] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:57] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:57] "GET /socket.io/?transport=polling&EIO=4&t=1778669517.773385 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:57] "POST /socket.io/?transport=polling&EIO=4&sid=WGbqNDPxNeWleN9QAAAO HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:57] "GET /socket.io/?transport=polling&EIO=4&sid=WGbqNDPxNeWleN9QAAAO&t=1778669517.8112829 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:58] "GET /socket.io/?transport=polling&EIO=4&sid=WGbqNDPxNeWleN9QAAAO&t=1778669517.8332243 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:21:59] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:22:00] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:22:04] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:22:09] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:22:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:22:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:23:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:23:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:28] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:28] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:28] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:30] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:34] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:35] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:37] "GET /socket.io/?EIO=4&transport=websocket&sid=WL2Qh-wV9OBxjIg4AAAM HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:37] "GET /api/history/detections HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:38] "GET /api/history/detections HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:46] "GET /api/detection/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:46] "GET /api/alert/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:46] "GET /api/detection/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:46] "GET /api/history/daily-summary HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:46] "GET /api/alert/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:46] "GET /api/history/daily-summary HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:48] "GET /socket.io/?EIO=4&transport=polling&t=y0axsekm HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:48] "GET /socket.io/?EIO=4&transport=polling&t=y0axtj7h HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:48] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:48] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:48] "POST /socket.io/?EIO=4&transport=polling&t=y0b78ohw&sid=3j5CXiY33QlqUW1CAAAR HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:48] "GET /socket.io/?EIO=4&transport=polling&t=y0b7961s&sid=3j5CXiY33QlqUW1CAAAR HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:48] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:48] "POST /socket.io/?EIO=4&transport=polling&t=y0bg84p2&sid=3j5CXiY33QlqUW1CAAAR HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:48] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:49] "GET /socket.io/?EIO=4&transport=polling&t=y0bg7n8g&sid=3j5CXiY33QlqUW1CAAAR HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:51] "GET /socket.io/?EIO=4&transport=websocket&sid=3j5CXiY33QlqUW1CAAAR HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:24:58] "POST /api/video/upload HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:04] "GET /api/history/detections HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:04] "GET /api/history/detections HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:05] "GET /api/detection/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:06] "GET /api/alert/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:06] "GET /api/detection/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:06] "GET /api/history/daily-summary HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:06] "GET /api/alert/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:06] "GET /api/history/daily-summary HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:07] "GET /socket.io/?EIO=4&transport=polling&t=y0prrdwo HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:07] "GET /socket.io/?EIO=4&transport=polling&t=y0prsd5w HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:07] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:07] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:07] "POST /socket.io/?EIO=4&transport=polling&t=y0q1268a&sid=9EXJEmcjwsD_462PAAAU HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:08] "GET /socket.io/?EIO=4&transport=polling&t=y0q12b5l&sid=9EXJEmcjwsD_462PAAAU HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:08] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:08] "POST /socket.io/?EIO=4&transport=polling&t=y0q9ve41&sid=9EXJEmcjwsD_462PAAAU HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:08] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:08] "GET /socket.io/?EIO=4&transport=polling&t=y0q9uzwn&sid=9EXJEmcjwsD_462PAAAU HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:12] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:12] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:17] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:17] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:23] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:23] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:28] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:28] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:32] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:32] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:38] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:38] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:43] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:43] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:48] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:48] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:53] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:53] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:57] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:25:57] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:03] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:03] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:08] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:08] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:12] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:12] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:18] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:18] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:23] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:23] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:28] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:28] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:33] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:33] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:38] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:38] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:43] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:43] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:48] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:48] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:53] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:53] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:58] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:26:58] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:03] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:03] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:08] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:08] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+ * Detected change in 'D:\\Isomer\\backend\\utils\\config.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 183-135-202
+127.0.0.1 - - [13/May/2026 16:27:20] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:20] "GET /socket.io/?EIO=4&transport=polling&t=y3gg9p8q HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:20] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:20] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:20] "POST /socket.io/?EIO=4&transport=polling&t=y3kdxb98&sid=E0uAh3lz31fXL1udAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:20] "GET /socket.io/?EIO=4&transport=polling&t=y3kdzjho&sid=E0uAh3lz31fXL1udAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:20] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:22] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:22] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:27] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:27] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+WARNING:tensorflow:From C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+127.0.0.1 - - [13/May/2026 16:27:32] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:32] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:37] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:37] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+ * Detected change in 'D:\\Isomer\\backend\\video_processing\\processor.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 183-135-202
+127.0.0.1 - - [13/May/2026 16:27:47] "GET /socket.io/?EIO=4&transport=polling&t=y41621nf HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:47] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:47] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:47] "POST /socket.io/?EIO=4&transport=polling&t=y45ao0h0&sid=GoutDBtfLLeh9damAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:47] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:47] "GET /socket.io/?EIO=4&transport=polling&t=y45aouqo&sid=GoutDBtfLLeh9damAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:47] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:52] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:52] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+WARNING:tensorflow:From C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+127.0.0.1 - - [13/May/2026 16:27:57] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:27:57] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:02] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:02] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+ * Detected change in 'D:\\Isomer\\backend\\app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 183-135-202
+127.0.0.1 - - [13/May/2026 16:28:16] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:16] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:16] "GET /socket.io/?EIO=4&transport=polling&t=y4mhggl6 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:16] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:16] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:16] "POST /socket.io/?EIO=4&transport=polling&t=y4re36n9&sid=vSkcmqVVno94Q1AKAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:16] "GET /socket.io/?EIO=4&transport=polling&t=y4re4zvp&sid=vSkcmqVVno94Q1AKAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:16] "POST /socket.io/?EIO=4&transport=polling&t=y4ro7q67&sid=vSkcmqVVno94Q1AKAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:16] "GET /socket.io/?EIO=4&transport=polling&t=y4ro67x4&sid=vSkcmqVVno94Q1AKAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:17] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:17] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:22] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:22] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+WARNING:tensorflow:From C:\Users\Dell\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+127.0.0.1 - - [13/May/2026 16:28:27] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:27] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:32] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:32] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:35] "GET /socket.io/?transport=polling&EIO=4&t=1778669915.2965705 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:35] "POST /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:35] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669915.3035522 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:35] "POST /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:35] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669915.317514 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:35] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669915.3334718 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:35] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669915.5043683 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:35] "POST /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:35] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669915.7905574 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:37] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669915.8323812 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:37] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:37] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669917.280896 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:37] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669917.4055665 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:37] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669917.5820932 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:37] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:37] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669917.6917982 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:37] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669917.8166687 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:38] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669917.9818244 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:38] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669918.0925298 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:38] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669918.2383335 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:38] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669918.4108734 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:38] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669918.5455146 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:38] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669918.6572149 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:38] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669918.8287573 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:39] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669918.9384644 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:39] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669919.0391953 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:39] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669919.2137284 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:39] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669919.3204308 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:39] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669919.416175 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:39] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669919.5917044 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:39] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669919.7113864 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:40] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669919.835056 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:40] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669920.185121 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:40] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669920.3318887 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:40] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669920.4415948 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:40] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669920.6251059 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:40] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669920.748775 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:41] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669920.8574839 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:41] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669921.101833 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:41] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669921.2529292 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:41] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669921.3736105 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:41] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669921.5790577 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:41] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669921.7007322 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:42] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669921.8144271 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:42] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669922.0069182 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:42] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669922.1236022 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:42] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669922.2374306 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:42] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669922.4083085 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:42] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669922.5329757 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:42] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:42] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:42] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669922.641685 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:42] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669922.820207 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:43] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669922.9538505 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:43] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669923.1573067 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:43] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669923.3530343 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:43] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669923.4687233 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:43] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669923.592395 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:43] "GET /socket.io/?transport=polling&EIO=4&sid=I1ePa6j-ylMOLOPVAAAC&t=1778669923.774906 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:47] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:47] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:52] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:52] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:57] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:28:57] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:02] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:02] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:07] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:07] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:12] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:12] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:14] "GET /socket.io/?transport=polling&EIO=4&t=1778669954.9201806 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:14] "POST /socket.io/?transport=polling&EIO=4&sid=ezoB00T9qKE6dkZUAAAE HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:14] "GET /socket.io/?transport=polling&EIO=4&sid=ezoB00T9qKE6dkZUAAAE&t=1778669954.933148 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:14] "POST /socket.io/?transport=polling&EIO=4&sid=ezoB00T9qKE6dkZUAAAE HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:14] "GET /socket.io/?transport=polling&EIO=4&sid=ezoB00T9qKE6dkZUAAAE&t=1778669954.946112 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:15] "GET /socket.io/?transport=polling&EIO=4&sid=ezoB00T9qKE6dkZUAAAE&t=1778669954.9570823 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:15] "GET /socket.io/?transport=polling&EIO=4&sid=ezoB00T9qKE6dkZUAAAE&t=1778669955.0687835 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:15] "GET /socket.io/?transport=polling&EIO=4&sid=ezoB00T9qKE6dkZUAAAE&t=1778669955.3031592 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:15] "GET /socket.io/?transport=polling&EIO=4&sid=ezoB00T9qKE6dkZUAAAE&t=1778669955.4627526 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:15] "GET /socket.io/?transport=polling&EIO=4&sid=ezoB00T9qKE6dkZUAAAE&t=1778669955.589392 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:15] "GET /socket.io/?transport=polling&EIO=4&sid=ezoB00T9qKE6dkZUAAAE&t=1778669955.822556 HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:17] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:17] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:22] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:22] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:22] "GET /api/health HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:27] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:27] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:32] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:32] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:39] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:40] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:43] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:43] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:48] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:48] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:53] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:53] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:57] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:29:57] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:02] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:02] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:08] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:08] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:13] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:13] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:18] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:18] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:23] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:23] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:28] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:28] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:33] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:33] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:38] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:38] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:43] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:43] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:48] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:48] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:53] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:53] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:58] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:30:58] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:03] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:03] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:07] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:07] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:12] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:12] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:17] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:17] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:22] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:22] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:27] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:27] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:32] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:32] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:37] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:37] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:42] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:42] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:47] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:47] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:52] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:52] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:57] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:31:57] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:02] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:02] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:07] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:07] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:13] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:13] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:18] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:18] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:23] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:23] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:28] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:28] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:33] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:33] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:38] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:38] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:43] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:43] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:48] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:48] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:53] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:53] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:58] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:32:58] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:33:03] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:33:03] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:33:08] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:33:08] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:33:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:33:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:34:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:34:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:35:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:35:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:36:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:36:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:37:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:37:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:17] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:17] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:17] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:17] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:22] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:22] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:27] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:27] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:32] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:32] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:38] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:38] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:43] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:43] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:48] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:48] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:53] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:53] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:58] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:38:58] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:03] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:03] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:08] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:08] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:13] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:13] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:18] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:18] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:23] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:23] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:28] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:28] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:33] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:33] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:39:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:40:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:40:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:41:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:41:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:12] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:12] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:17] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:17] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:22] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:22] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:27] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:27] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:32] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:32] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:38] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:38] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:43] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:43] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:48] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:48] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:53] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:53] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:58] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:42:58] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:03] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:03] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:08] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:08] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:13] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:13] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:18] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:18] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:23] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:23] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:28] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:28] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:33] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:33] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:38] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:43:38] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:44:39] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:44:39] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:45:40] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:45:40] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:46:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:46:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:47:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:47:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:48:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:48:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:49:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:49:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:50:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:50:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:51:41] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:51:41] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:16] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:17] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:17] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:17] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:22] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:22] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:27] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:27] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:27] "GET /socket.io/?EIO=4&transport=websocket&sid=vSkcmqVVno94Q1AKAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:28] "GET /api/detection/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:28] "GET /api/alert/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:28] "GET /api/history/daily-summary HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:28] "GET /api/detection/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:28] "GET /api/alert/statistics HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:28] "GET /api/history/daily-summary HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:38] "GET /api/history/detections HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:52:38] "GET /api/history/detections HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:02] "GET /socket.io/?EIO=4&transport=polling&t=z0mld0gd HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:03] "GET /socket.io/?EIO=4&transport=polling&t=z0mler1t HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:03] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:03] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:03] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:03] "POST /socket.io/?EIO=4&transport=polling&t=z0mux8ff&sid=Mkt0jZ3SfITKtAKuAAAH HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:03] "GET /socket.io/?EIO=4&transport=polling&t=z0muyqd4&sid=Mkt0jZ3SfITKtAKuAAAH HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:03] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:08] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:08] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:13] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:13] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:18] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:18] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:23] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:23] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:28] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:28] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:33] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:33] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:38] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:38] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:43] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:43] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:48] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:48] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:53] "GET /api/alert/active HTTP/1.1" 200 -
+127.0.0.1 - - [13/May/2026 16:53:53] "GET /api/history/dashboard-stats HTTP/1.1" 200 -
+ * Detected change in 'D:\\Isomer\\backend\\routes\\video_routes.py', reloading

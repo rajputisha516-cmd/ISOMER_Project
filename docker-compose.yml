@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+      - DATABASE_URL=sqlite:///surveillance.db
+      - SECRET_KEY=your-secret-key-change-in-production
+    volumes:
+      - ./backend/uploads:/app/uploads
+      - ./backend/captures:/app/captures
+      - ./backend/history:/app/history
+      - ./backend/logs:/app/logs
+    networks:
+      - surveillance-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_URL=http://localhost:5000
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://backend:5000
+    depends_on:
+      - backend
+    networks:
+      - surveillance-network
+
+networks:
+  surveillance-network:
+    driver: bridge
+
+volumes:
+  surveillance-data:
+    driver: local
