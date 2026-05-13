@@ -13,6 +13,7 @@ function Dashboard() {
   const [streaming, setStreaming] = useState(false)
   const [streamError, setStreamError] = useState('')
   const [connectionState, setConnectionState] = useState('connecting')
+  const [currentDetections, setCurrentDetections] = useState([])
   const [stats, setStats] = useState({
     detections: 0,
     alerts: 0,
@@ -38,12 +39,14 @@ function Dashboard() {
     const handleDisconnect = () => {
       setConnectionState('disconnected')
       setStreaming(false)
+      setCurrentDetections([])
       setStats(prev => ({ ...prev, fps: 0 }))
     }
 
     const handleConnectError = (error) => {
       setConnectionState('error')
       setStreaming(false)
+      setCurrentDetections([])
       setStreamError(error?.message || 'Unable to connect to the backend stream service.')
     }
 
@@ -58,11 +61,13 @@ function Dashboard() {
 
     const handleStreamStopped = () => {
       setStreaming(false)
+      setCurrentDetections([])
       setStats(prev => ({ ...prev, fps: 0 }))
     }
 
     const handleStreamError = (data) => {
       setStreaming(false)
+      setCurrentDetections([])
       setStats(prev => ({ ...prev, fps: 0 }))
       setStreamError(data?.message || 'Unable to start the video stream.')
     }
@@ -70,10 +75,14 @@ function Dashboard() {
     const handleVideoFrame = (data) => {
       const now = Date.now()
       if (now - lastFpsUpdateRef.current < 500) {
+        if (Array.isArray(data?.detections)) {
+          setCurrentDetections(data.detections)
+        }
         return
       }
 
       lastFpsUpdateRef.current = now
+      setCurrentDetections(Array.isArray(data?.detections) ? data.detections : [])
       setStats(prev => ({
         ...prev,
         fps: data?.fps || 0
@@ -133,6 +142,7 @@ function Dashboard() {
     }
 
     setStreamError('')
+    setCurrentDetections([])
     socket.emit('start_stream', { source: 0 })
   }
 
@@ -141,6 +151,7 @@ function Dashboard() {
       return
     }
 
+    setCurrentDetections([])
     socket.emit('stop_stream')
   }
 
@@ -223,6 +234,7 @@ function Dashboard() {
             streaming={streaming}
             streamError={streamError}
             connectionState={connectionState}
+            currentDetections={currentDetections}
           />
         </div>
 

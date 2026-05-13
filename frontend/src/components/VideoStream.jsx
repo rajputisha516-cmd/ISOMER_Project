@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { AlertTriangle, Play } from 'lucide-react'
 
-function VideoStream({ socket, streaming, streamError, connectionState }) {
+function VideoStream({ socket, streaming, streamError, connectionState, currentDetections }) {
   const imageRef = useRef(null)
   const [fps, setFps] = useState(0)
   const [hasFrame, setHasFrame] = useState(false)
@@ -50,6 +50,15 @@ function VideoStream({ socket, streaming, streamError, connectionState }) {
   }, [streaming])
 
   const waitingForFrames = streaming && !hasFrame && !streamError
+  const uniqueDetections = Array.isArray(currentDetections)
+    ? currentDetections.reduce((accumulator, detection) => {
+        const label = detection?.class_name
+        if (!label || accumulator.includes(label)) {
+          return accumulator
+        }
+        return [...accumulator, label]
+      }, [])
+    : []
 
   return (
     <div className="glass p-6 rounded-lg h-full flex flex-col">
@@ -108,6 +117,25 @@ function VideoStream({ socket, streaming, streamError, connectionState }) {
         <p>Resolution: 640x480</p>
         <p>Status: {streaming ? 'Active' : 'Inactive'}</p>
         <p>Connection: {connectionState}</p>
+        <p>Detections in frame: {currentDetections?.length || 0}</p>
+      </div>
+
+      <div className="mt-4">
+        <p className="text-sm text-gray-400 mb-2">Detected classes</p>
+        {uniqueDetections.length > 0 ? (
+          <div className="flex flex-wrap gap-2">
+            {uniqueDetections.map((label) => (
+              <span
+                key={label}
+                className="px-3 py-1 rounded-full bg-blue-500/15 border border-blue-500/30 text-blue-200 text-xs uppercase tracking-wide"
+              >
+                {label}
+              </span>
+            ))}
+          </div>
+        ) : (
+          <p className="text-sm text-gray-500">No objects detected in the latest frame.</p>
+        )}
       </div>
     </div>
   )

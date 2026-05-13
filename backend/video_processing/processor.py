@@ -33,11 +33,14 @@ class VideoProcessor:
 
             self.model = YOLO(model_path)
             name_to_id = {name: idx for idx, name in self.model.names.items()}
-            self.class_filter = [
-                name_to_id[name]
-                for name in Config.CLASSES_TO_DETECT
-                if name in name_to_id
-            ] or None
+            if Config.CLASSES_TO_DETECT:
+                self.class_filter = [
+                    name_to_id[name]
+                    for name in Config.CLASSES_TO_DETECT
+                    if name in name_to_id
+                ] or None
+            else:
+                self.class_filter = None
             print(f"Model {self.model_name} loaded successfully")
         except Exception as exc:
             print(f"Error loading model: {exc}")

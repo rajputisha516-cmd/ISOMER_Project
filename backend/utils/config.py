@@ -12,6 +12,19 @@ def _sqlite_uri(path):
     return f"sqlite:///{path.as_posix()}"
 
 
+def _parse_class_filter(raw_value):
+    """Parse a comma-separated class filter from the environment."""
+    if raw_value is None:
+        return None
+
+    normalized = raw_value.strip()
+    if not normalized or normalized.lower() == "all":
+        return None
+
+    classes = [item.strip() for item in normalized.split(",") if item.strip()]
+    return classes or None
+
+
 class Config:
     """Application configuration."""
 
@@ -79,4 +92,4 @@ class Config:
         "DRAW_SEGMENTATION_MASKS",
         "false",
     ).lower() == "true"
-    CLASSES_TO_DETECT = ["person", "car", "truck", "bus", "bicycle", "motorcycle"]
+    CLASSES_TO_DETECT = _parse_class_filter(os.environ.get("CLASSES_TO_DETECT"))
